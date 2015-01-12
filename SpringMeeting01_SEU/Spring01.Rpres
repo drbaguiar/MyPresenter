@@ -1,0 +1,31 @@
+SEU Spring Meeting
+========================================================
+author: Bryan M. Aguiar
+date: `r format(Sys.Date(), "%d %b %Y")`
+transition:rotate
+
+Phone 303.333.3333
+
+Overview
+========================================================
+
+For more details on authoring R presentations click the
+**Help** button on the toolbar.
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+Spring
+========================================================
+
+```{r}
+summary(cars)
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```
