@@ -1,8 +1,9 @@
 First Presentation
 ===
 author: Dr. B
-date: `r date()`
-transition:  rotate
+date: `r format(Sys.Date(), "%d %b %Y")`
+
+transition:rotate
 
 First Slide
 ===
@@ -30,4 +31,20 @@ Slide With Plot
 x <-c(1:10)
 y <-c(20:29)
 plot(x,y)
+```
+
+Slide with GoogleVis
+===
+
+```{r,echo=FALSE}
+source('C:/Users/bryan_000/Documents/GitHub/MyWork/StdOpen.R')
+call("googleVis")
+#Set name of datafile
+datafile <- paste(datadir,"bigmacindex.csv",sep = "")
+##Data from http://www.economist.com/content/big-mac-index
+input<- read.csv(datafile)
+Map<- data.frame(input$Country, input$dollar_price)
+names(Map)<- c("Country", "Price")
+Geo=gvisGeoMap(Map, locationvar="Country", numvar="Price",options=list(height=350, dataMode='regions'))
+print(Geo,"chart")
 ```

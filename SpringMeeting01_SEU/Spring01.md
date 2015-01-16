@@ -1,7 +1,7 @@
 SEU Spring Meeting
 ========================================================
 author: Bryan M. Aguiar
-date: 11 Jan 2015
+date: 16 Jan 2015
 transition:rotate
 
 Phone 303.333.3333
