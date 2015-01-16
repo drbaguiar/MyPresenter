@@ -35,7 +35,7 @@ plot(x,y)
 Slide with GoogleVis
 ===
 
-```{r,echo=FALSE}
+```{r,echo=FALSE,,results="asis"}
 source('C:/Users/bryan_000/Documents/GitHub/MyWork/StdOpen.R')
 call("googleVis")
 #Set name of datafile
@@ -45,13 +45,13 @@ input<- read.csv(datafile)
 Map<- data.frame(input$Country, input$dollar_price)
 names(Map)<- c("Country", "Price")
 Geo=gvisGeoMap(Map, locationvar="Country", numvar="Price",options=list(height=350, dataMode='regions'))
-plot(Geo)
+print(Geo, "chart")
 ```
 
 Slide 2 with GoogleVis
 ===
 
-```{r,results="asis"}
+```{r,results="asis",echo=FALSE}
 data(Fruits)
 M <- gvisMotionChart(Fruits, idvar="Fruit", timevar="Year")
 print(M, "chart")
