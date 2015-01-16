@@ -47,3 +47,12 @@ names(Map)<- c("Country", "Price")
 Geo=gvisGeoMap(Map, locationvar="Country", numvar="Price",options=list(height=350, dataMode='regions'))
 plot(Geo)
 ```
+
+Slide 2 with GoogleVis
+===
+
+```{r,results="asis"}
+data(Fruits)
+M <- gvisMotionChart(Fruits, idvar="Fruit", timevar="Year")
+print(M, "chart")
+```
