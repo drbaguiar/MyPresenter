@@ -2,7 +2,6 @@ First Presentation
 ===
 author: Dr. B
 date: `r format(Sys.Date(), "%d %b %Y")`
-
 transition:rotate
 
 First Slide
@@ -25,7 +24,7 @@ summary(cars)
 ```
 
 Slide With Plot
-========================================================
+===
 
 ```{r, echo=FALSE}
 x <-c(1:10)
@@ -46,5 +45,5 @@ input<- read.csv(datafile)
 Map<- data.frame(input$Country, input$dollar_price)
 names(Map)<- c("Country", "Price")
 Geo=gvisGeoMap(Map, locationvar="Country", numvar="Price",options=list(height=350, dataMode='regions'))
-print(Geo,"chart")
+plot(Geo)
 ```
