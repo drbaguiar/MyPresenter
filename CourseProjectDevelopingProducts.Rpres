@@ -5,14 +5,6 @@ date: `r format(Sys.Date(), "%d %b %Y")`
 transition:rotate
 
 
-Project Overview
-========================================================
-
-- Purpose of App
-- Example Input
-- Example Outputs
-- Conclusion
-
 App Purpose
 ===
 
@@ -40,7 +32,7 @@ This app returns common descriptive statistics for the selected dataset:
 
 ```{r}
 library(psych)
-describe(women)
+describe(stackloss)
 ```
 
 
@@ -50,31 +42,15 @@ Example Outputs: 5 Number Summary
 This app returns the 5 number summary for the selected dataset:
 
 ```{r}
-summary(women)
+summary(stackloss)
 ```
 
-Example Outputs: List dataset
-===
-
-This app returns a list from the selected dataset (Limited to 5 lines in this example):
-
-```{r, echo=FALSE}
-head(women,5)
-```
 
 Example Outputs: Plot
 ===
 
 This app returns an appropriate plot from the selected dataset:
 
-```{r, echo=FALSE}
-plot(women)
-```
+```{r}
+plot(stackloss)
 
-Conclusion
-===
-
-- Purpose of App
-- Example Insput
-- Example Outputs
-- Conclusion

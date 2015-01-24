@@ -5,14 +5,6 @@ date: 24 Jan 2015
 transition:rotate
 
 
-Project Overview
-========================================================
-
-- Purpose of App
-- Example Input
-- Example Outputs
-- Conclusion
-
 App Purpose
 ===
 
@@ -41,16 +33,20 @@ This app returns common descriptive statistics for the selected dataset:
 
 ```r
 library(psych)
-describe(women)
+describe(stackloss)
 ```
 
 ```
-       vars  n   mean    sd median trimmed   mad min max range skew
-height    1 15  65.00  4.47     65   65.00  5.93  58  72    14 0.00
-weight    2 15 136.73 15.50    135  136.31 17.79 115 164    49 0.23
-       kurtosis   se
-height    -1.44 1.15
-weight    -1.34 4.00
+           vars  n  mean    sd median trimmed  mad min max range  skew
+Air.Flow      1 21 60.43  9.17     58   59.35 5.93  50  80    30  0.81
+Water.Temp    2 21 21.10  3.16     20   20.82 2.97  17  27    10  0.47
+Acid.Conc.    3 21 86.29  5.36     87   86.76 4.45  72  93    21 -0.87
+stack.loss    4 21 17.52 10.17     15   16.12 5.93   7  42    35  1.16
+           kurtosis   se
+Air.Flow      -0.26 2.00
+Water.Temp    -1.23 0.69
+Acid.Conc.     0.19 1.17
+stack.loss     0.13 2.22
 ```
 
 
@@ -61,45 +57,28 @@ This app returns the 5 number summary for the selected dataset:
 
 
 ```r
-summary(women)
+summary(stackloss)
 ```
 
 ```
-     height         weight     
- Min.   :58.0   Min.   :115.0  
- 1st Qu.:61.5   1st Qu.:124.5  
- Median :65.0   Median :135.0  
- Mean   :65.0   Mean   :136.7  
- 3rd Qu.:68.5   3rd Qu.:148.0  
- Max.   :72.0   Max.   :164.0  
+    Air.Flow       Water.Temp     Acid.Conc.      stack.loss   
+ Min.   :50.00   Min.   :17.0   Min.   :72.00   Min.   : 7.00  
+ 1st Qu.:56.00   1st Qu.:18.0   1st Qu.:82.00   1st Qu.:11.00  
+ Median :58.00   Median :20.0   Median :87.00   Median :15.00  
+ Mean   :60.43   Mean   :21.1   Mean   :86.29   Mean   :17.52  
+ 3rd Qu.:62.00   3rd Qu.:24.0   3rd Qu.:89.00   3rd Qu.:19.00  
+ Max.   :80.00   Max.   :27.0   Max.   :93.00   Max.   :42.00  
 ```
 
-Example Outputs: List dataset
-===
-
-This app returns a list from the selected dataset (Limited to 5 lines in this example):
-
-
-```
-  height weight
-1     58    115
-2     59    117
-3     60    120
-4     61    123
-5     62    126
-```
 
 Example Outputs: Plot
 ===
 
 This app returns an appropriate plot from the selected dataset:
 
-![plot of chunk unnamed-chunk-4](CourseProjectDevelopingProducts-figure/unnamed-chunk-4-1.png) 
 
-Conclusion
-===
+```r
+plot(stackloss)
+```
 
-- Purpose of App
-- Example Insput
-- Example Outputs
-- Conclusion
+![plot of chunk unnamed-chunk-3](CourseProjectDevelopingProducts-figure/unnamed-chunk-3-1.png) 
